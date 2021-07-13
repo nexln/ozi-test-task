@@ -42,9 +42,9 @@ export const Login = () => {
     onSubmit: values => {
       formik.resetForm()
       dispatch(loginTC(values))
-      setTimeout( () => {
+      setTimeout(() => {
         dispatch(initializeAppTC())
-      }, 2000 )
+      }, 2000)
 
     },
   })
@@ -83,13 +83,6 @@ export const Login = () => {
               formik.touched.password && formik.errors.password
                 ? <div style={{color: "red"}}>{formik.errors.password}</div> : null
             }
-            {/*<FormControlLabel*/}
-            {/*  label={'Remember me'}*/}
-            {/*  control={<Checkbox*/}
-            {/*    name='rememberMe'*/}
-            {/*    onChange={formik.handleChange}*/}
-            {/*  />}*/}
-            {/*/>*/}
             <Button type={'submit'} variant={'contained'} color={'primary'}>Login</Button>
           </FormGroup>
         </FormControl>

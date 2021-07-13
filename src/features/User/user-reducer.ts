@@ -37,11 +37,11 @@ export const fetchUserDataTC = () => {
     authAPI.me()
       .then((res) => {
         if (res.data.data) {
-        dispatch(setAppStatusAC({status: 'succeeded'}))
-        dispatch(setUserDataAC({email: res.data.data.email, name: res.data.data.name, id: res.data.data.id}))
-      } else {
-      handleServerAppError(res.data, dispatch);
-    }
+          dispatch(setAppStatusAC({status: 'succeeded'}))
+          dispatch(setUserDataAC({email: res.data.data.email, name: res.data.data.name, id: res.data.data.id}))
+        } else {
+          handleServerAppError(res.data, dispatch);
+        }
       })
       .catch(error => {
         handleServerNetworkError(error, dispatch)

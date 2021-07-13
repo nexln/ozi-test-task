@@ -25,9 +25,9 @@ export const User = () => {
 
   return (
     <div>
-<p>{userName}</p>
-<p>{userId}</p>
-<p>{userEmail}</p>
+      <p>{userName}</p>
+      <p>{userId}</p>
+      <p>{userEmail}</p>
     </div>
   );
 }

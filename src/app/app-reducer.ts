@@ -2,7 +2,6 @@ import {setIsLoggedInAC} from "../features/Login/auth-reducer";
 import {authAPI} from "../api/authAPI";
 import {Dispatch} from "redux";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {AppRootStateType} from "./store";
 import {handleServerAppError, handleServerNetworkError} from "../utils/error-utils";
 
 export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
@@ -35,18 +34,16 @@ export const {setAppErrorAC} = slice.actions
 export const {setIsInitializedAC} = slice.actions
 
 
-export const initializeAppTC = () => (dispatch: Dispatch, getState: () => AppRootStateType) => {
-  // const token = getState().auth.token
-  // const tokenType = getState().auth.tokenType
-  authAPI.me(/*token, tokenType*/)
+export const initializeAppTC = () => (dispatch: Dispatch) => {
+  authAPI.me()
     .then(res => {
       if (res.data.data) {
         dispatch(setIsInitializedAC({isInitialized: true}))
         dispatch(setIsLoggedInAC({value: true}))
         dispatch(setAppStatusAC({status: 'succeeded'}))
-    } else {
-    handleServerAppError(res.data, dispatch);
-  }
+      } else {
+        handleServerAppError(res.data, dispatch);
+      }
     })
     .catch((error) => {
       handleServerNetworkError(error, dispatch)

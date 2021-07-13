@@ -24,7 +24,6 @@ export type MineData = {
 }
 
 export type AuthLoginType = {
-  // clientId: string,
   email: string,
   password: string,
 }
@@ -38,9 +37,11 @@ export const authAPI = {
   login(data: AuthLoginType) {
     return instance.post<ResponseType<ResData>>('/auth/user', data)
   },
-  me(/*token: string, tokenType: string*/) {
-    return instance.get<ResponseType<MineData>>('/tager/user/profile', {headers: {
+  me() {
+    return instance.get<ResponseType<MineData>>('/tager/user/profile', {
+      headers: {
         'Authorization': `${cookies.get('tokenType')} ${cookies.get('accessToken')}`
-      }})
+      }
+    })
   }
 }
