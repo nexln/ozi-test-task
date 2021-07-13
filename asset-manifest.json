@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ozi-test-task/static/css/main.d0252831.chunk.css",
+    "main.js": "/ozi-test-task/static/js/main.3f79f75b.chunk.js",
+    "main.js.map": "/ozi-test-task/static/js/main.3f79f75b.chunk.js.map",
+    "runtime-main.js": "/ozi-test-task/static/js/runtime-main.e0544261.js",
+    "runtime-main.js.map": "/ozi-test-task/static/js/runtime-main.e0544261.js.map",
+    "static/js/2.85e9c68e.chunk.js": "/ozi-test-task/static/js/2.85e9c68e.chunk.js",
+    "static/js/2.85e9c68e.chunk.js.map": "/ozi-test-task/static/js/2.85e9c68e.chunk.js.map",
+    "index.html": "/ozi-test-task/index.html",
+    "static/css/main.d0252831.chunk.css.map": "/ozi-test-task/static/css/main.d0252831.chunk.css.map",
+    "static/js/2.85e9c68e.chunk.js.LICENSE.txt": "/ozi-test-task/static/js/2.85e9c68e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0544261.js",
+    "static/js/2.85e9c68e.chunk.js",
+    "static/css/main.d0252831.chunk.css",
+    "static/js/main.3f79f75b.chunk.js"
+  ]
+}
