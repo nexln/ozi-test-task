@@ -6,7 +6,7 @@ const settings = {
 }
 
 export const instance = axios.create({
-  baseURL: 'https://localhost:3000/api',
+  baseURL: 'https://cors-anywhere.herokuapp.com/https://tager.dev.ozitag.com/api',
   ...settings
 })
 
