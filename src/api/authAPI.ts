@@ -6,7 +6,7 @@ const settings = {
 }
 
 export const instance = axios.create({
-  baseURL: 'https://cors-anywhere.herokuapp.com/https://tager.dev.ozitag.com/api',
+  baseURL: 'https://localhost:3000/api',
   ...settings
 })
 
@@ -38,6 +38,7 @@ export const authAPI = {
     return instance.post<ResponseType<ResData>>('/auth/user', data)
   },
   me() {
+
     return instance.get<ResponseType<MineData>>('/tager/user/profile', {
       headers: {
         'Authorization': `${cookies.get('tokenType')} ${cookies.get('accessToken')}`
